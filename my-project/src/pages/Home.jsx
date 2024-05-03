@@ -1,11 +1,11 @@
-import { Card } from "../common/cardComponent";
+import { Card } from "../Components/cardComponent";
 import "./Home.css";
 
-function Home() {
+function Home({ fetchData, isPending }) {
   return (
     <div className="Home">
       <header className="Home-header">
-        <Card />
+        {!isPending && <Card fetchData={fetchData} />}
       </header>
     </div>
   );
