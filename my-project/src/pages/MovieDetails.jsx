@@ -1,14 +1,12 @@
-import { Card } from "../Components/cardComponent";
 import { Navbar } from "../Components/nav";
 import "./website.css";
 
-function Home({ fetchData, isPending }) {
+function MovieDetails({ fetchData, isPending }) {
   return (
     <div className="Home">
       <header>
         <Navbar />
       </header>
-
       <body className="Home-body">
         {!isPending && <Card fetchData={fetchData} />}
       </body>
@@ -16,4 +14,4 @@ function Home({ fetchData, isPending }) {
   );
 }
 
-export default Home;
+export default MovieDetails;

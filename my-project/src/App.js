@@ -1,9 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import { useFetchAPI } from "./Components/FetchAPI";
+import { useFetchListTitles } from "./Components/FetchTitles";
 
 function App() {
-  const { data, isPending } = useFetchAPI("http://localhost:8000/releases");
+  const { data, isPending } = useFetchListTitles(
+    "http://localhost:8000/releases"
+  );
 
   return (
     <div className="App">
