@@ -1302,5 +1302,34 @@
       "source_name": "AppleTV+",
       "is_original": 0
     }
-  ]
+  ],
+  "titleDetails": {
+    "id": 1707132,
+    "title": "The Veil",
+    "original_title": "The Veil",
+    "plot_overview": "Redemption gives way to a reckoning when a reclusive retired priest shelters a young Amish runaway in crisis, only to reveal a mystery that ties her to a terrifying encounter from his youth— and the aurora-inducing solar storm that rages overhead.",
+    "type": "movie",
+    "runtime_minutes": 70,
+    "year": 2023,
+    "end_year": null,
+    "release_date": "2023-10-27",
+    "imdb_id": "tt15670414",
+    "tmdb_id": 1121297,
+    "tmdb_type": "movie",
+    "genres": [11, 17, 7, 15],
+    "genre_names": ["Horror", "Thriller", "Drama", "Science Fiction"],
+    "user_rating": 7.5,
+    "critic_score": null,
+    "us_rating": null,
+    "poster": "https://cdn.watchmode.com/posters/01707132_poster_w185.jpg",
+    "backdrop": null,
+    "original_language": "en",
+    "similar_titles": [392012],
+    "networks": null,
+    "network_names": null,
+    "relevance_percentile": 99.835,
+    "popularity_percentile": null,
+    "trailer": "https://www.youtube.com/watch?v=GGMmFC_GpXc",
+    "trailer_thumbnail": "https://cdn.watchmode.com/video_thumbnails/1863595_pthumbnail_320.jpg"
+  }
 }
