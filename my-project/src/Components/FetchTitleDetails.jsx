@@ -21,7 +21,7 @@ export const useFetchTitleDetails = (titleId, urlMock) => {
     }
 
     console.log(data);
-  }, []);
+  });
 
   return { data, isPending };
 };
