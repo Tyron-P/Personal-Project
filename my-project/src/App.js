@@ -39,7 +39,7 @@ function App() {
           />
           <Route
             path="/movie-details"
-            element={<MovieDetails id={selectedId} />}
+            element={<MovieDetails movieId={selectedId} />}
           />
         </Routes>
       </BrowserRouter>

@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom";
+import logo from "./logo.png";
+
 export const Navbar = () => {
   const navigate = useNavigate();
   return (
-    <nav className="navbar navbar-dark bg-dark">
+    <nav className="navbar navbar-dark bg-dark" style={{ textAlign: "left" }}>
       <div className="container-fluid">
         <a
           className="navbar-brand"
@@ -12,7 +14,7 @@ export const Navbar = () => {
           style={{ textAlign: "center" }}
         >
           <img
-            src="/docs/5.0/assets/brand/bootstrap-logo.svg"
+            src={logo}
             alt=""
             width="30"
             height="24"

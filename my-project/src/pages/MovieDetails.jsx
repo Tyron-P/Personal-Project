@@ -13,23 +13,50 @@ function MovieDetails({ movieId }) {
       </header>
       <div className="Home-body">
         {!isPending && (
-          <div className="container">
+          <div className="container ">
             <div className="row row-cols-2">
-              <div className="col">
-                <img src={data.poster} className="img-fluid" alt="..." />
+              <div className="col" style={{ width: "30rem" }}>
+                <div
+                  className="card text-white bg-dark mb-3"
+                  style={{ width: "18rem" }}
+                >
+                  <img src={data.poster} className="img-fluid" alt="..." />
+                  <br />
+                  {data.title}
+                </div>
               </div>
               <div className="col">
-                <p className="text-sm-start">{data.plot_overview}</p>
+                {data.trailer && (
+                  <div>
+                    <iframe
+                      width="600"
+                      height="340"
+                      src={`https://www.youtube.com/embed/${
+                        data.trailer.split("=")[1]
+                      }`}
+                      title="FX&#39;s The Veil | Official Trailer | Starring Elisabeth Moss"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                )}
+                <p className="fs-5">{data.plot_overview}</p>
+                <br />
               </div>
               <div className="col">
-                {data.title} <br />
-                <div>{`User Rating: ${data.user_rating}`}</div>
-              </div>
-              <div className="col">
-                Watch Trailer:
-                <a href={data.trailer} className="link">
-                  {data.trailer}
-                </a>
+                <br />
+                <div
+                  className="card text-white bg-dark mb-3"
+                  style={{ width: "18rem" }}
+                >
+                  <div className="content">{`Type: ${data.type}`}</div>
+                  <div className="content">{`User Rating: ${data.user_rating}`}</div>
+                  <div className="content">{`Release date: ${data.release_date}`}</div>
+                  <div className="content">{`Runtime: ${data.runtime_minutes} minutes`}</div>
+                  <div className="content">{`Genres: ${data.genre_names}`}</div>
+                </div>
               </div>
             </div>
           </div>

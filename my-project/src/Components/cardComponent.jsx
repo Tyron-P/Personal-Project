@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import noImageAvailable from "./noImageAvailable.png";
 
 export const Card = ({ fetchData, handleCardClick }) => {
   const navigate = useNavigate();
@@ -15,11 +16,15 @@ export const Card = ({ fetchData, handleCardClick }) => {
         return (
           <div
             key={index}
-            className="card"
-            style={{ width: "18rem" }}
+            className="card text-white bg-dark mb-3"
+            style={{ width: "18rem", marginLeft: "15px" }}
             id={release.id}
           >
-            <img src={release.poster_url} className="card-img-top" alt="..." />
+            <img
+              src={release.poster_url ? release.poster_url : noImageAvailable}
+              className="card-img-top"
+              alt="..."
+            />
             <div className="card-body">
               <h5 className="card-title">{release.title}</h5>
               <a
