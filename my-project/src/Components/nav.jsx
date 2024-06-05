@@ -18,7 +18,7 @@ export const Navbar = () => {
             height="24"
             className="d-inline-block align-text-top"
           />
-          Top 10 Movies
+          Your Latest Entertainment
         </a>
       </div>
     </nav>
