@@ -5,9 +5,7 @@ import { useFetchListTitles } from "./Components/FetchTitles";
 import MovieDetails from "./pages/MovieDetails";
 
 function App() {
-  const { data, isPending } = useFetchListTitles(
-    "http://localhost:8000/releases"
-  );
+  const { data, isPending } = useFetchListTitles();
   const [selectedId, setSelectedId] = useState(null);
   const handleCardClick = (id) => {
     setSelectedId(id);

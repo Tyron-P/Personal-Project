@@ -3,7 +3,7 @@ import noImageAvailable from "./noImageAvailable.png";
 
 export const Card = ({ fetchData, handleCardClick }) => {
   const navigate = useNavigate();
-  const releases = [...fetchData];
+  const releases = [...fetchData.releases];
   const handleClick = (id) => {
     handleCardClick(id);
   };

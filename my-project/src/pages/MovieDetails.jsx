@@ -51,11 +51,21 @@ function MovieDetails({ movieId }) {
                   className="card text-white bg-dark mb-3"
                   style={{ width: "18rem" }}
                 >
-                  <div className="content">{`Type: ${data.type}`}</div>
-                  <div className="content">{`User Rating: ${data.user_rating}`}</div>
-                  <div className="content">{`Release date: ${data.release_date}`}</div>
-                  <div className="content">{`Runtime: ${data.runtime_minutes} minutes`}</div>
-                  <div className="content">{`Genres: ${data.genre_names}`}</div>
+                  {data.type && (
+                    <div className="content">{`Type: ${data.type}`}</div>
+                  )}
+                  {data.user_rating && (
+                    <div className="content">{`User Rating: ${data.user_rating}`}</div>
+                  )}
+                  {data.release_date && (
+                    <div className="content">{`Release date: ${data.release_date}`}</div>
+                  )}
+                  {data.runtime_minutes && (
+                    <div className="content">{`Runtime: ${data.runtime_minutes} minutes`}</div>
+                  )}
+                  {data.genre_names && (
+                    <div className="content">{`Genres: ${data.genre_names}`}</div>
+                  )}
                 </div>
               </div>
             </div>
