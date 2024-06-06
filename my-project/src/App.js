@@ -1,10 +1,46 @@
-import logo from "./logo.svg";
-import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
+import Home from "./pages/Home";
+import { useFetchListTitles } from "./Components/FetchTitles";
+import MovieDetails from "./pages/MovieDetails";
 
 function App() {
+  const { data, isPending } = useFetchListTitles();
+  const [selectedId, setSelectedId] = useState(null);
+  const handleCardClick = (id) => {
+    setSelectedId(id);
+  };
+  console.log(selectedId);
   return (
     <div className="App">
-      <header className="App-header"></header>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            index
+            element={
+              <Home
+                fetchData={data}
+                isPending={isPending}
+                handleCardClick={handleCardClick}
+              />
+            }
+          />
+          <Route
+            path="/home"
+            element={
+              <Home
+                fetchData={data}
+                isPending={isPending}
+                handleCardClick={handleCardClick}
+              />
+            }
+          />
+          <Route
+            path="/movie-details"
+            element={<MovieDetails movieId={selectedId} />}
+          />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
