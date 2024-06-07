@@ -34,7 +34,7 @@ export const Card = ({ fetchData, handleCardClick }) => {
                   handleClick(release.id);
                 }}
               >
-                Find out more
+                Find out more info
               </a>
             </div>
           </div>
